@@ -26,12 +26,13 @@ jobs:
         run: npm run build
 
       - name: Deploy to Hostinger via SFTP
-        uses: wangyucode/sftp-upload-action@v1.6
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.4
         with:
-          host: ${{ secrets.SFTP_HOST }}
+          server: ${{ secrets.SFTP_HOST }}
           port: ${{ secrets.SFTP_PORT }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          localDir: dist
-          remoteDir: public_html
-          exclude: ".git*,node_modules"
+          local_path: 'dist/*'
+          remote_path: 'public_html'
+          sftp_only: true
+          ssh_cmd_args: "-o StrictHostKeyChecking=no"
