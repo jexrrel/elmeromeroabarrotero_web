@@ -1,0 +1,43 @@
+---
+// Sección hero reutilizable
+export interface Props {
+  title: string;
+  subtitle: string;
+  ctaText: string;
+  ctaLink: string;
+}
+
+const { 
+  title = "Te damos la bienvenida a El Mero Mero Abarrotero",
+  subtitle = "Su tienda de confianza para todos sus productos de abarrotes y necesidades del hogar",
+  ctaText = "Conocer Más",
+  ctaLink = "/servicios"
+} = Astro.props;
+---
+
+<section class="relative bg-primary-400 text-white">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
+    <div class="text-center">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        {title}
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">
+        {subtitle}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a 
+          href={ctaLink}
+          class="bg-white text-primary-400 px-8 py-3 rounded-lg font-semibold hover:bg-beige-300 transition-colors"
+        >
+          {ctaText}
+        </a>
+        <a 
+          href="/contacto"
+          class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-400 transition-colors"
+        >
+          Contactar
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

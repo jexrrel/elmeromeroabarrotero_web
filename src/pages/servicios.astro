@@ -1,0 +1,62 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+
+// Datos estáticos de servicios - puedes modificar estos fácilmente
+const services = [
+  {
+    title: "Venta de Abarrotes",
+    description: "Productos frescos y de calidad para su hogar. Desde granos básicos hasta productos gourmet.",
+    icon: "🛒"
+  },
+  {
+    title: "Entrega a Domicilio",
+    description: "Servicio de entrega rápido y confiable. Llevamos sus productos hasta la puerta de su casa.",
+    icon: "🚚"
+  },
+  {
+    title: "Atención Personalizada",
+    description: "Asesoría especializada para sus necesidades. Nuestro equipo le ayuda a encontrar lo que necesita.",
+    icon: "👥"
+  },
+  {
+    title: "Productos Locales",
+    description: "Apoyamos a productores locales ofreciendo productos frescos de la región.",
+    icon: "🌱"
+  },
+  {
+    title: "Precios Justos",
+    description: "Ofrecemos precios competitivos sin comprometer la calidad de nuestros productos.",
+    icon: "💰"
+  },
+  {
+    title: "Horario Extendido",
+    description: "Estamos disponibles cuando más lo necesite con horarios flexibles.",
+    icon: "⏰"
+  }
+];
+---
+
+<BaseLayout title="Servicios - El Mero Mero Abarrotero">
+  <Header />
+  <main class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h1 class="text-4xl font-bold text-neutral-800 mb-4">Nuestros Servicios</h1>
+        <p class="text-xl text-neutral-600">Conozca todos los servicios que ofrecemos para satisfacer sus necesidades</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {services.map((service) => (
+          <div class="bg-white p-8 rounded-lg shadow-sm hover:shadow-md transition-shadow border border-beige-200">
+            <div class="text-4xl mb-4">{service.icon}</div>
+            <h3 class="text-xl font-semibold text-neutral-800 mb-2">{service.title}</h3>
+            <p class="text-neutral-600">{service.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

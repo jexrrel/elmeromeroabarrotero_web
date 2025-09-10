@@ -1,0 +1,37 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+---
+
+<BaseLayout title="Página no encontrada - El Mero Mero Abarrotero">
+  <Header />
+  <main class="py-16">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <div class="mb-8">
+        <h1 class="text-6xl font-bold text-primary-400 mb-4">404</h1>
+        <h2 class="text-3xl font-bold text-neutral-800 mb-4">Página no encontrada</h2>
+        <p class="text-xl text-neutral-600 mb-8">
+          Lo sentimos, la página que busca no existe o ha sido movida.
+        </p>
+      </div>
+      
+      <div class="space-y-4">
+        <a 
+          href="/" 
+          class="inline-block bg-primary-400 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-500 transition-colors"
+        >
+          Volver al Inicio
+        </a>
+        <div class="text-neutral-500">
+          <p>O puede visitar:</p>
+          <div class="flex flex-wrap justify-center gap-4 mt-4">
+            <a href="/servicios" class="text-primary-400 hover:text-primary-500">Servicios</a>
+            <a href="/contacto" class="text-primary-400 hover:text-primary-500">Contacto</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

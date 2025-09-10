@@ -1,0 +1,47 @@
+---
+// Componente de navegación reutilizable
+---
+
+<header class="bg-white shadow-sm border-b">
+  <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <!-- Logo -->
+      <div class="flex-shrink-0">
+        <a href="/" class="text-2xl font-bold text-primary-400">
+          El Mero Mero
+        </a>
+      </div>
+      
+      <!-- Navegación Desktop -->
+      <div class="hidden md:block">
+        <div class="ml-10 flex items-baseline space-x-4">
+          <a href="/" class="text-neutral-800 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium">
+            Inicio
+          </a>
+          <a href="/servicios" class="text-neutral-500 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium">
+            Servicios
+          </a>
+          <a href="/contacto" class="text-neutral-500 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium">
+            Contacto
+          </a>
+        </div>
+      </div>
+      
+      <!-- Botón CTA -->
+      <div class="hidden md:block">
+        <a href="/contacto" class="bg-primary-400 text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-primary-500">
+          Contactar
+        </a>
+      </div>
+      
+      <!-- Menú móvil -->
+      <div class="md:hidden">
+        <button type="button" class="text-neutral-500 hover:text-neutral-600 focus:outline-none focus:text-neutral-600">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,63 @@
+---
+// Sección de características reutilizable
+export interface Feature {
+  title: string;
+  description: string;
+  icon: string;
+}
+
+export interface Props {
+  title: string;
+  subtitle: string;
+  features: Feature[];
+}
+
+const { 
+  title = "¿Por qué elegirnos?",
+  subtitle = "Ofrecemos la mejor experiencia de compra con productos de calidad",
+  features = [
+    {
+      title: "Productos Frescos",
+      description: "Garantizamos la frescura de todos nuestros productos",
+      icon: "🥬"
+    },
+    {
+      title: "Precios Competitivos",
+      description: "Los mejores precios del mercado sin comprometer la calidad",
+      icon: "💰"
+    },
+    {
+      title: "Atención Personalizada",
+      description: "Nuestro equipo está siempre dispuesto a ayudarte",
+      icon: "👥"
+    }
+  ]
+} = Astro.props;
+---
+
+<section class="py-16 bg-beige-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-neutral-800 mb-4">
+        {title}
+      </h2>
+      <p class="text-xl text-neutral-600 max-w-3xl mx-auto">
+        {subtitle}
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {features.map((feature) => (
+        <div class="text-center p-6 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow border border-beige-200">
+          <div class="text-4xl mb-4">{feature.icon}</div>
+          <h3 class="text-xl font-semibold text-neutral-800 mb-2">
+            {feature.title}
+          </h3>
+          <p class="text-neutral-600">
+            {feature.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

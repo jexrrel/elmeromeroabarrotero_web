@@ -1,0 +1,61 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import Hero from '@/components/Hero.astro';
+import Features from '@/components/Features.astro';
+
+// Datos estáticos - puedes cambiar estos valores fácilmente
+const heroData = {
+  title: "Te damos la bienvenida a El Mero Mero Abarrotero",
+  subtitle: "Su tienda de confianza para todos sus productos de abarrotes y necesidades del hogar. Calidad garantizada y precios competitivos.",
+  ctaText: "Conocer Más",
+  ctaLink: "/servicios"
+};
+
+const featuresData = {
+  title: "¿Por qué elegirnos?",
+  subtitle: "Ofrecemos la mejor experiencia de compra con productos de calidad y servicio excepcional",
+  features: [
+    {
+      title: "Productos Frescos",
+      description: "Garantizamos la frescura de todos nuestros productos con entrega diaria",
+      icon: "🥬"
+    },
+    {
+      title: "Precios Competitivos",
+      description: "Los mejores precios del mercado sin comprometer la calidad",
+      icon: "💰"
+    },
+    {
+      title: "Atención Personalizada",
+      description: "Nuestro equipo está siempre dispuesto a ayudarle con sus necesidades",
+      icon: "👥"
+    },
+    {
+      title: "Entrega Rápida",
+      description: "Servicio de entrega a domicilio rápido y confiable",
+      icon: "🚚"
+    },
+    {
+      title: "Variedad de Productos",
+      description: "Amplia gama de productos para satisfacer todas sus necesidades",
+      icon: "🛒"
+    },
+    {
+      title: "Calidad Garantizada",
+      description: "Trabajamos solo con proveedores confiables y productos de primera calidad",
+      icon: "⭐"
+    }
+  ]
+};
+---
+
+<BaseLayout title="El Mero Mero Abarrotero - Tu tienda de confianza">
+  <Header />
+  <main>
+    <Hero {...heroData} />
+    <Features {...featuresData} />
+  </main>
+  <Footer />
+</BaseLayout>
