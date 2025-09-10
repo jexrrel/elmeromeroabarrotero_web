@@ -1,4 +1,4 @@
-# El Mero Mero Abarrotero - Página Web
+# El Mero Mero Abarrotero
 
 Una página web estática modular construida con Astro para la tienda de abarrotes "El Mero Mero Abarrotero".
 
