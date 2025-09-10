@@ -32,7 +32,7 @@ jobs:
           port: ${{ secrets.SFTP_PORT }}
           username: ${{ secrets.SFTP_USERNAME }}
           password: ${{ secrets.SFTP_PASSWORD }}
-          local_path: 'dist/'   # sube la carpeta completa
+          local_path: 'dist/*'   # <- contenido, no la carpeta
           remote_path: 'domains/elmeromeroabarrotero.com/public_html'
           delete_remote_files: false
           args: "-o StrictHostKeyChecking=no"
